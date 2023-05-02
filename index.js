@@ -231,7 +231,7 @@ Aşağıdakileri yapmak için fenomenEkle'i kullanın:
 ÖRNEK: fenomenEkle(fenomenler, 6, "Workintech", 10000000, 2022, "Instagram") çağrıldığında dizinin sonuna yukarıdaki nesne en sona eklenerek yeni fenomenler dizisini döndürmelidir. */
 
 function fenomenEkle(dizi , numarasi, profili, takipciSayisi, postlari, platformu) {
- let kopyaDizi = [...dizi]
+ const kopyaDizi = [...dizi]
  const yeniObj = {}
  yeniObj.number = numarasi;
  yeniObj.profile = profili;
@@ -299,7 +299,7 @@ Not: Gönderi sayısı belli olmayan (NA) hesaba katmayın.
 
 function platformaGoreCokGonderiYapanFenomen(fenomenler , platform){
   const newArray = [];
-  for (let i = 0 ; i < fenomenler.legth ; i++){
+  for (let i = 0 ; i < fenomenler.length ; i++){
     if (fenomenler[i].platform  == platform) {
       newArray.push(fenomenler[i].posts);
     } 
